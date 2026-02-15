@@ -1,0 +1,21 @@
+# Model weights
+*.pth
+*.pt
+*.h5
+*.keras
+
+# Audio files
+*.wav
+
+# Videos
+*.mp4
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ignore large model weights
+*.pth
+*.pt
+*.h5
+*.keras
