@@ -40,7 +40,7 @@ The goal is to simulate smart assistive glasses capable of real-time perception 
 
 ## 📓 Kaggle Training Notebooks
 
-Training notebooks available inside `/notebooks` folder.
+Training notebooks available inside `/Notebook` folder.
 
 ---
 
