@@ -38,18 +38,6 @@ The goal is to simulate smart assistive glasses capable of real-time perception 
 
 ---
 
-## 📂 Project Structure
-
-├── object_detection/
-├── gesture_module/
-├── audio_module/
-├── fusion_layer/
-├── requirements.txt
-└── README.md
-
-
----
-
 ## ⚙️ Installation
 
 ```bash
