@@ -3,6 +3,8 @@
 *.pt
 *.h5
 *.keras
+*.ckpt
+data/
 
 # Audio files
 *.wav
@@ -14,8 +16,6 @@
 __pycache__/
 *.pyc
 
-# Ignore large model weights
-*.pth
-*.pt
-*.h5
-*.keras
+
+
+
