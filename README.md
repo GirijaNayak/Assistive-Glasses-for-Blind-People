@@ -41,6 +41,6 @@ The goal is to simulate smart assistive glasses capable of real-time perception 
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Assistive-Glasses-for-Blind-People.git
+git clone https://github.com/GirijaNayak/Assistive-Glasses-for-Blind-People.git
 cd Assistive-Glasses-for-Blind-People
 pip install -r requirements.txt
