@@ -3,26 +3,20 @@ import numpy as np
 import tensorflow as tf
 import json
 
-# =========================
-# LOAD MODEL
-# =========================
+
 model = tf.keras.models.load_model("gesture_mobilenet_hagrid.keras")
 
-# =========================
-# LOAD CLASS NAMES
-# =========================
+
 with open("gesture_classes.json", "r") as f:
     class_indices = json.load(f)
 
-# reverse mapping: index -> class name
+
 class_names = {v: k for k, v in class_indices.items()}
 num_classes = len(class_names)
 
 print("Loaded classes:", class_names)
 
-# =========================
-# IMAGE PREPROCESSING
-# =========================
+
 IMG_SIZE = 224
 
 def preprocess_frame(frame):
@@ -31,9 +25,7 @@ def preprocess_frame(frame):
     frame = np.expand_dims(frame, axis=0)
     return frame
 
-# =========================
-# START WEBCAM
-# =========================
+
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
@@ -47,13 +39,13 @@ while True:
     if not ret:
         break
 
-    # preprocess
+   
     img = preprocess_frame(frame)
 
-    # prediction
+
     preds = model.predict(img, verbose=0)
 
-    # safety check
+   
     if preds.shape[1] != num_classes:
         gesture = "Invalid output"
     else:
@@ -61,7 +53,7 @@ while True:
         confidence = float(np.max(preds))
         gesture = class_names.get(pred_index, "Unknown")
 
-    # display result
+   
     cv2.putText(
         frame,
         f"Gesture: {gesture} ({confidence:.2f})",
